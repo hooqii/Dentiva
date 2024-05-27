@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
 import com.example.dentiva.R
 import com.example.dentiva.R.id.motionLayout
-import com.example.dentiva.view.main.MainActivity
+import com.example.dentiva.view.welcome.WelcomeActivity
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
@@ -59,7 +59,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun navigateToNextScreen() {
-        intent = Intent(this, MainActivity::class.java)
+        intent = Intent(this, WelcomeActivity::class.java)
         startActivity(intent)
         finish()
     }

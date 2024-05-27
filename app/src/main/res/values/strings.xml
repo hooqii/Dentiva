@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Dentiva</string>
+    <string name="logo_image">Logo Image</string>
+    <string name="hello">Hello</string>
+    <string name="Wellcome">Wellcome..</string>
+    <string name="textWellcome">Dentiva, the innovative solution for comprehensive dental health. Get ready to transform how you care for your teeth and prevent dental diseases with cutting-edge technology.</string>
+    <string name="login">Login</string>
+    <string name="continueWithGoogle">Continue With Google</string>
+    <string name="don_t_have_account">Don’t have account?</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
