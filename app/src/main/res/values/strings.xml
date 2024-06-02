@@ -8,4 +8,19 @@
     <string name="continueWithGoogle">Continue With Google</string>
     <string name="don_t_have_account">Don’t have account?</string>
     <string name="sign_up">Sign Up</string>
+    <string name="let_s_create_your_account">Let\'s Create Your\nAccount</string>
+    <string name="image_icon">Image Icon</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="Email">Email</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="pass_less_than_8_char">Password less than 8 characters</string>
+    <string name="I_agree_to_the">I agree to the</string>
+    <string name="terms_and_conditions">Terms &amp; Conditions</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="and">and</string>
+    <string name="already_have_an_account">Already have account?</string>
+    <string name="login_with_your_account">Login with your acount</string>
+    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID</string>
+    <string name="Logout">Logout</string>
 </resources>

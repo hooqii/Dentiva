@@ -8,18 +8,25 @@ import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
+import androidx.lifecycle.ViewModelProvider
 import com.example.dentiva.R
-import com.example.dentiva.R.id.motionLayout
+import com.example.dentiva.view.main.MainActivity
 import com.example.dentiva.view.welcome.WelcomeActivity
+import com.example.dentiva.viewmodel.AuthViewModel
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
+
+    private lateinit var authViewModel: AuthViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val motionLayout = findViewById<MotionLayout>(motionLayout)
+        authViewModel = ViewModelProvider(this)[AuthViewModel::class.java]
+
+        val motionLayout = findViewById<MotionLayout>(R.id.motionLayout)
 
         motionLayout.addTransitionListener(object : MotionLayout.TransitionListener {
             override fun onTransitionStarted(
@@ -27,7 +34,6 @@ class SplashActivity : AppCompatActivity() {
                 startId: Int,
                 endId: Int
             ) {
-                // Do nothing
             }
 
             override fun onTransitionChange(
@@ -36,7 +42,6 @@ class SplashActivity : AppCompatActivity() {
                 endId: Int,
                 progress: Float
             ) {
-                // Do nothing
             }
 
             override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
@@ -49,7 +54,6 @@ class SplashActivity : AppCompatActivity() {
                 positive: Boolean,
                 progress: Float
             ) {
-                // Do nothing
             }
         })
 
@@ -59,8 +63,15 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun navigateToNextScreen() {
-        intent = Intent(this, WelcomeActivity::class.java)
-        startActivity(intent)
-        finish()
+        authViewModel.isUserAuthenticated.observe(this) { isAuthenticated ->
+            val nextActivity = if (isAuthenticated) {
+                MainActivity::class.java
+            } else {
+                WelcomeActivity::class.java
+            }
+            val intent = Intent(this, nextActivity)
+            startActivity(intent)
+            finish()
+        }
     }
 }

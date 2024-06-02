@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "204319349365",
+    "project_id": "dentiva-17cb2",
+    "storage_bucket": "dentiva-17cb2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204319349365:android:e177e87a41f9b5ba83b63c",
+        "android_client_info": {
+          "package_name": "com.example.dentiva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204319349365-1snef8cnnmmrk7c79oc0e409pj5uqb1c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dentiva",
+            "certificate_hash": "378711ae5fa996530eb2b98511a62f4af86d59a2"
+          }
+        },
+        {
+          "client_id": "204319349365-j51d38uif9akr1tdik30km6vbirh2kqb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTqSUnTYdew-7PVXs70TnvrgGiA1h3fN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204319349365-j51d38uif9akr1tdik30km6vbirh2kqb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
