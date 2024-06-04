@@ -23,4 +23,18 @@
     <string name="login_with_your_account">Login with your acount</string>
     <string name="default_web_client_id">YOUR_WEB_CLIENT_ID</string>
     <string name="Logout">Logout</string>
+    <string name="good_morning">Good Morning..</string>
+    <string name="username">Kevin Willam</string>
+    <string name="notification">Notification</string>
+    <string name="image_profile">Image Profile</string>
+    <string name="smart_reminder">Smart Reminder</string>
+    <string name="let_s_clean_your_tooth">Let’s clean your tooth</string>
+    <string name="alarm">Alarm</string>
+    <string name="brush_your_tooth_in">Brush your tooth in</string>
+    <string name="_07_hours_23_minutes">07 hours 23 minutes</string>
+    <string name="dental_treatment_schedule">Dental treatment schedule</string>
+    <string name="sat_july_27">Sat July 27</string>
+    <string name="days_count">34 days from now</string>
+    <string name="view_all">View all</string>
+    <string name="category">Category</string>
 </resources>
