@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.example.dentiva.R
-import com.example.dentiva.data.local.DoctorDetails
+import com.example.dentiva.data.remote.response.DoctorDetails
 
 class DoctorDetailsAdapter :
     ListAdapter<DoctorDetails, DoctorDetailsAdapter.DoctorViewHolder>(DoctorDiffCallback()) {

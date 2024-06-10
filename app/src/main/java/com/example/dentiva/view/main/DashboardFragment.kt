@@ -20,7 +20,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dentiva.adapter.DoctorDetailsAdapter
-import com.example.dentiva.data.local.DoctorDetails
+import com.example.dentiva.data.remote.response.DoctorDetails
 import com.example.dentiva.databinding.FragmentDashboardBinding
 import com.example.dentiva.viewmodel.DoctorViewModel
 import com.example.dentiva.viewmodel.DoctorViewModelFactory

@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.dentiva.data.local.AppDatabase
-import com.example.dentiva.data.local.DoctorDetails
+import com.example.dentiva.data.remote.response.DoctorDetails
 import com.example.dentiva.data.local.DoctorDetailsDao
 import com.example.dentiva.data.remote.retrofit.RetrofitInstance
 import com.google.gson.JsonObject

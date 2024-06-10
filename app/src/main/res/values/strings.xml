@@ -76,4 +76,6 @@
     <string name="unable_to_fetch_location">Unable to fetch location. Please ensure location services are enabled.</string>
     <string name="refresh">Refresh</string>
     <string name="icon_refresh">Icon Refresh</string>
+    <string name="confirm_to_upload">Confirm to upload</string>
+    <string name="selected_image">Selected Image</string>
 </resources>

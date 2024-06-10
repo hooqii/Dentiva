@@ -5,7 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.dentiva.data.local.DoctorDetails
+import com.example.dentiva.data.remote.response.DoctorDetails
 import com.example.dentiva.data.remote.repository.DoctorRepository
 import kotlinx.coroutines.launch
 

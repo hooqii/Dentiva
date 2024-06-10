@@ -27,49 +27,53 @@
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="72dp"
+            android:layout_marginBottom="32dp"
             android:fontFamily="@font/poppins_regular"
             android:text="@string/dentiva_will_help_you_scanning_it"
             android:textColor="@color/dark_main"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView5"
+            app:layout_constraintBottom_toTopOf="@+id/circle_center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/circle_center"
             android:layout_width="325dp"
             android:layout_height="325dp"
-            android:background="@drawable/dentiva_scan"
+            android:background="@drawable/ellipse"
             android:contentDescription="@string/image_scan"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.38" />
 
         <ImageView
-            android:layout_width="90dp"
-            android:layout_height="110dp"
-            android:background="@drawable/dentiva_logo2"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.421"
-            app:layout_constraintStart_toStartOf="@+id/imageView5"
-            app:layout_constraintTop_toTopOf="@+id/imageView5" />
+            android:id="@+id/iv_preview"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/ellipse_vector"
+            android:contentDescription="@string/selected_image"
+            app:layout_constraintBottom_toBottomOf="@+id/circle_center"
+            app:layout_constraintEnd_toEndOf="@+id/circle_center"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="@+id/circle_center"
+            app:layout_constraintTop_toTopOf="@+id/circle_center"
+            app:layout_constraintVertical_bias="0.488" />
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="32dp"
             android:fontFamily="@font/poppins_semibold"
             android:text="@string/select_or_capture_your_image"
             android:textColor="@color/dark_main"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+            app:layout_constraintTop_toBottomOf="@+id/circle_center" />
 
         <LinearLayout
             android:id="@+id/gallery"
@@ -132,6 +136,25 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_upload"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingHorizontal="12dp"
+            android:text="@string/confirm_to_upload"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="46dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gallery" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

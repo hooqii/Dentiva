@@ -67,6 +67,12 @@ dependencies {
     annotationProcessor(libs.compiler)
     implementation(libs.androidx.fragment.ktx)
 
+    implementation("com.squareup.okhttp3:okhttp:4.9.1")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
+
+    implementation(libs.glide)
+    annotationProcessor(libs.glideCompiler)
+
     implementation(libs.roomKtx)
     implementation(libs.roomRuntime)
     ksp(libs.roomCompiler)

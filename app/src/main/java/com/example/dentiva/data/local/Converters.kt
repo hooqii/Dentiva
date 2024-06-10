@@ -1,6 +1,7 @@
 package com.example.dentiva.data.local
 
 import androidx.room.TypeConverter
+import com.example.dentiva.data.remote.response.Photo
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 

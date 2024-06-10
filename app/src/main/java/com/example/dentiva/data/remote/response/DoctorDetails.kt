@@ -1,4 +1,4 @@
-package com.example.dentiva.data.local
+package com.example.dentiva.data.remote.response
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
