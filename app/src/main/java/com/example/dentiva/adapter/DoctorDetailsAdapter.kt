@@ -21,6 +21,7 @@ class DoctorDetailsAdapter :
         val imageViewDoctor: ImageView = itemView.findViewById(R.id.imageViewDoctor)
         val textViewName: TextView = itemView.findViewById(R.id.textViewName)
         val textViewAddress: TextView = itemView.findViewById(R.id.textViewAddress)
+        val textViewPhoneNumber: TextView = itemView.findViewById(R.id.textViewPhone)
         val textViewRating: TextView = itemView.findViewById(R.id.textViewRating)
     }
 
@@ -35,6 +36,7 @@ class DoctorDetailsAdapter :
         val currentDoctor = getItem(position)
         holder.textViewName.text = currentDoctor.displayName
         holder.textViewAddress.text = currentDoctor.address
+        holder.textViewPhoneNumber.text = currentDoctor.phoneNumber
         holder.textViewRating.text = "${currentDoctor.rating} star rating"
 
         val photos = currentDoctor.photos

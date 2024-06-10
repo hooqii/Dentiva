@@ -8,6 +8,7 @@ data class DoctorDetails(
     @PrimaryKey val displayName: String,
     val rating: Double,
     val address: String,
+    val phoneNumber: String?,
     val photos: List<Photo>
 )
 
