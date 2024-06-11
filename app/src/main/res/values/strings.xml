@@ -78,4 +78,9 @@
     <string name="icon_refresh">Icon Refresh</string>
     <string name="confirm_to_upload">Confirm to upload</string>
     <string name="selected_image">Selected Image</string>
+    <string name="analyze_result">Analyze Result</string>
+    <string name="jenis_penyakit">Jenis Penyakit</string>
+    <string name="suggestion">Suggestion</string>
+    <string name="accuracy">Accuraion</string>
+    <string name="type_of_disease">Type of disease</string>
 </resources>
