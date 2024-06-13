@@ -129,7 +129,7 @@ class ScanFragment : Fragment() {
 
     private fun uploadImage(file: File) {
         progressDialog = ProgressDialog(requireContext()).apply {
-            setMessage("Uploading image...")
+            setMessage("Please wait, Dentiva is processing your image...")
             setCancelable(false)
             show()
         }

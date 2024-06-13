@@ -21,8 +21,37 @@ class ResultScanActivity : AppCompatActivity() {
         uploadResponse?.let {
             // Display the data in the TextViews
             binding.tvJenisPenyakit.text = it.jenis_penyakit
-            binding.tvSaran.text = it.saran
+            binding.tvSaran.text = removeMarkdown(it.saran)
             binding.tvTingkatAkurat.text = it.tingkat_akurat
         }
+    }
+
+    // Function to remove Markdown formatting
+    private fun removeMarkdown(markdown: String): String {
+        var text = markdown
+
+        // Remove headings
+        text = text.replace(Regex("""^#{1,6}\s*""", RegexOption.MULTILINE), "")
+
+        // Remove bold and italic
+        text = text.replace(Regex("""(\*\*|__)(.*?)\1"""), "$2")  // Bold
+        text = text.replace(Regex("""(\*|_)(.*?)\1"""), "$2")  // Italic
+
+        // Remove unordered list markers
+        text = text.replace(Regex("""^\s*[-+*]\s+""", RegexOption.MULTILINE), "")
+
+        // Remove ordered list markers
+        text = text.replace(Regex("""^\s*\d+\.\s+""", RegexOption.MULTILINE), "")
+
+        // Remove links but keep the text
+        text = text.replace(Regex("""\[(.*?)\]\(.*?\)"""), "$1")
+
+        // Remove remaining markdown characters
+        text = text.replace(Regex("""[`~>#+=|{}.!]"""), "")
+
+        // Trim extra whitespace and newlines
+        text = text.trim()
+
+        return text
     }
 }
