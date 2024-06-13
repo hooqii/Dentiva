@@ -1,6 +1,7 @@
 package com.example.dentiva.view.result
 
 import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dentiva.data.remote.response.UploadResponse
 import com.example.dentiva.databinding.ActivityResultScanBinding
@@ -12,6 +13,7 @@ class ResultScanActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityResultScanBinding.inflate(layoutInflater)
+        enableEdgeToEdge()
         setContentView(binding.root)
 
         // Retrieve the upload response from the intent

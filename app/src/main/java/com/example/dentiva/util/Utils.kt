@@ -21,7 +21,7 @@ import java.util.Locale
 
 private const val FILENAME_FORMAT = "yyyyMMdd_HHmmss"
 private val timeStamp: String = SimpleDateFormat(FILENAME_FORMAT, Locale.US).format(Date())
-private const val MAXIMAL_SIZE = 1000000
+private const val MAXIMAL_SIZE = 150000 // 150 KB
 
 fun getImageUri(context: Context): Uri {
     var uri: Uri? = null
@@ -61,7 +61,7 @@ fun File.reduceFileImage(): File {
         val bmpPicByteArray = bmpStream.toByteArray()
         streamLength = bmpPicByteArray.size
         compressQuality -= 5
-    } while (streamLength > MAXIMAL_SIZE)
+    } while (streamLength > MAXIMAL_SIZE && compressQuality > 0)
     bitmap?.compress(Bitmap.CompressFormat.JPEG, compressQuality, FileOutputStream(file))
     return file
 }

@@ -21,6 +21,7 @@ import com.example.dentiva.data.remote.response.UploadResponse
 import com.example.dentiva.databinding.FragmentScanBinding
 import com.example.dentiva.util.getImageUri
 import com.example.dentiva.util.uriToFile
+import com.example.dentiva.util.reduceFileImage
 import com.example.dentiva.view.result.ResultScanActivity
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -64,6 +65,8 @@ class ScanFragment : Fragment() {
             }
             btnUpload.setOnClickListener {
                 if (file != null) {
+                    // Reduce the file size before uploading
+                    file = file?.reduceFileImage()
                     uploadImage(file!!)
                 } else {
                     Toast.makeText(
@@ -97,6 +100,8 @@ class ScanFragment : Fragment() {
             currentImageUri = uri
             currentImageUri?.let {
                 file = uriToFile(it, requireContext())
+                // Reduce the file size after selecting from gallery
+                file = file?.reduceFileImage()
             }
             showImage()
         } else {
@@ -115,6 +120,8 @@ class ScanFragment : Fragment() {
         if (isSuccess) {
             currentImageUri?.let {
                 file = uriToFile(it, requireContext())
+                // Reduce the file size after taking a picture
+                file = file?.reduceFileImage()
             }
             showImage()
         }
