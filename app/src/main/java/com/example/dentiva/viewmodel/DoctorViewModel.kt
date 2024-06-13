@@ -5,24 +5,24 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.dentiva.data.remote.response.DoctorDetails
+import com.example.dentiva.data.remote.response.DoctorEntity
 import com.example.dentiva.data.remote.repository.DoctorRepository
 import kotlinx.coroutines.launch
 
 class DoctorViewModel(application: Application) : AndroidViewModel(application) {
     private val repository = DoctorRepository(application)
 
-    fun getDoctorDetails(latitude: Double, longitude: Double): LiveData<Result<List<DoctorDetails>>> {
-        val result = MutableLiveData<Result<List<DoctorDetails>>>()
+    fun getDoctorDetails(latitude: Double, longitude: Double): LiveData<Result<List<DoctorEntity>>> {
+        val result = MutableLiveData<Result<List<DoctorEntity>>>()
         viewModelScope.launch {
             result.postValue(repository.getDoctorDetails(latitude, longitude).value)
         }
         return result
     }
 
-    fun insertDoctorDetails(doctorDetailsList: List<DoctorDetails>) {
+    fun insertDoctorDetails(doctorEntityList: List<DoctorEntity>) {
         viewModelScope.launch {
-            repository.insertDoctorDetails(doctorDetailsList)
+            repository.insertDoctorDetails(doctorEntityList)
         }
     }
 }

@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.dentiva.data.local.AppDatabase
-import com.example.dentiva.data.remote.response.DoctorDetails
+import com.example.dentiva.data.remote.response.DoctorEntity
 import com.example.dentiva.data.local.DoctorDetailsDao
 import com.example.dentiva.data.remote.retrofit.RetrofitInstance
 import com.google.gson.JsonObject
@@ -17,8 +17,8 @@ class DoctorRepository(application: Application) {
 
     suspend fun getDoctorDetails(
         latitude: Double, longitude: Double
-    ): LiveData<Result<List<DoctorDetails>>> {
-        val result = MutableLiveData<Result<List<DoctorDetails>>>()
+    ): LiveData<Result<List<DoctorEntity>>> {
+        val result = MutableLiveData<Result<List<DoctorEntity>>>()
 
         val location = JsonObject().apply {
             addProperty("latitude", latitude)
@@ -42,7 +42,7 @@ class DoctorRepository(application: Application) {
         }
     }
 
-    suspend fun insertDoctorDetails(doctorDetailsList: List<DoctorDetails>) {
-        doctorDetailsDao.insertAll(doctorDetailsList)
+    suspend fun insertDoctorDetails(doctorEntityList: List<DoctorEntity>) {
+        doctorDetailsDao.insertAll(doctorEntityList)
     }
 }

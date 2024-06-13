@@ -12,10 +12,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.example.dentiva.R
-import com.example.dentiva.data.remote.response.DoctorDetails
+import com.example.dentiva.data.remote.response.DoctorEntity
 
 class DoctorDetailsAdapter :
-    ListAdapter<DoctorDetails, DoctorDetailsAdapter.DoctorViewHolder>(DoctorDiffCallback()) {
+    ListAdapter<DoctorEntity, DoctorDetailsAdapter.DoctorViewHolder>(DoctorDiffCallback()) {
 
     inner class DoctorViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageViewDoctor: ImageView = itemView.findViewById(R.id.imageViewDoctor)
@@ -49,12 +49,12 @@ class DoctorDetailsAdapter :
         }
     }
 
-    class DoctorDiffCallback : DiffUtil.ItemCallback<DoctorDetails>() {
-        override fun areItemsTheSame(oldItem: DoctorDetails, newItem: DoctorDetails): Boolean {
+    class DoctorDiffCallback : DiffUtil.ItemCallback<DoctorEntity>() {
+        override fun areItemsTheSame(oldItem: DoctorEntity, newItem: DoctorEntity): Boolean {
             return oldItem.displayName == newItem.displayName
         }
 
-        override fun areContentsTheSame(oldItem: DoctorDetails, newItem: DoctorDetails): Boolean {
+        override fun areContentsTheSame(oldItem: DoctorEntity, newItem: DoctorEntity): Boolean {
             return oldItem == newItem
         }
     }

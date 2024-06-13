@@ -5,9 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.example.dentiva.data.remote.response.DoctorDetails
+import com.example.dentiva.data.remote.response.DoctorEntity
 
-@Database(entities = [DoctorDetails::class], version = 1, exportSchema = false)
+@Database(entities = [DoctorEntity::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun doctorDetailsDao(): DoctorDetailsDao
